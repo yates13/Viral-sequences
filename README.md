@@ -13,17 +13,19 @@ This project aims to analyze and study viral sequences using various bioinformat
 - [Usage](#usage)
 - [Results](#results)
 - [Contributing](#contributing)
-- [License](#license)
+  
 
 ## Installation
 
-To run the code in this project, you need to have the following dependencies installed:
+Before running the viral sequence analysis, ensure that the following software and packages are installed:
 
-- BWA (version 0.7.12 or higher)
-- samtools (version 1.10 or higher)
-- bcftools (version 1.10 or higher)
+- BWA (Burrows-Wheeler Aligner)
+- Samtools
+- BCFtools
+- GATK (Genome Analysis Toolkit)
+- FastQC
 
-You can install these tools by following their respective installation instructions on their official websites.
+Make sure these tools are installed and accessible in your system's PATH.
 
 ## Usage
 
@@ -32,14 +34,14 @@ You can install these tools by following their respective installation instructi
    ```bash
    cd viral-sequencUpdate the paths and filenames in the provided scripts according to your dataset and reference genomes.
 
-# Run the main script for read mapping and variant analysis:
+# Run the main script for read mapping:
 
-bash
-Copy code
-./mapping.sh
-Follow the on-screen prompts and provide the necessary inputs when prompted.
+   ```bash
+./mapping_k181.sh
+```
 
-The output files, including alignment files, variant files, and consensus sequences, will be generated in the specified output directories.
+
+The output files, including alignment files, and directories.
 
 ## Results
 The results of this project include:
