@@ -34,6 +34,13 @@ Make sure these tools are installed and accessible in your system's PATH.
    ```bash
    cd viral-sequencUpdate the paths and filenames in the provided scripts according to your dataset and reference genomes.
 
+ # Perform fastqc to determine the quality of your data (refer to fastqc in codes file)
+ 
+  ```bash
+# Find 'your_file.fastq' for your sample
+fastqc "your_file.fastq"
+```
+
 # Run the main script for read mapping:
 
    ```bash
