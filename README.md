@@ -50,7 +50,7 @@ fastqc "your_file.fastq"
    
    ```bash
 ./mapping_k181.sh
-```
+``
 
 ## Variant call files
 
