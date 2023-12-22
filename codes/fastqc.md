@@ -8,7 +8,7 @@ output: html_document
 In this tutorial, we will walk through the process of performing basic quality control (QC) on a sequencing file using FastQC. We will then assess the QC results to determine if trimming is needed.
 
 ## Step 1: Download and Install FastQC
-Before running FastQC, you need to download and install it. You can find FastQC here.
+Before running FastQC, you need to download and install it. You can find FastQC [here](https://www.bioinformatics.babraham.ac.uk/projects/fastqc/)
 
 ## Step 2: Run FastQC
 Now, let's run FastQC on your sequencing file.
