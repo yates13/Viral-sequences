@@ -36,7 +36,9 @@ Make sure these tools are installed and accessible in your system's PATH.
    ```
 
  ## Perform fastqc to determine the quality of your data (refer to fastqc in codes file)
- 
+
+ 2. Run fatqc on your sample
+    
   ```bash
 # Find 'your_file.fastq' for your sample
 fastqc "your_file.fastq"
@@ -44,11 +46,16 @@ fastqc "your_file.fastq"
 
 ## Run the main script for read mapping:
 
+3. Trimming with Trimmomatic
+   
    ```bash
 ./mapping_k181.sh
 ```
 
 ## Variant call files
+
+4. Create variant files to look for mutations
+
   ```bash
 bcftools mpileup -Ou -f k181.fasta sorted_wt.bam | bcftools call -mv > wt_variants.vcf
 ```
