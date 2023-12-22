@@ -48,9 +48,8 @@ fastqc "your_file.fastq"
 
 3. Trimming with Trimmomatic
    
-   ```bash
-./mapping_k181.sh
-``
+   follow along with the "mapping_k181.sh" in the codes folder
+
 
 ## Variant call files
 
