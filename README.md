@@ -35,20 +35,20 @@ Make sure these tools are installed and accessible in your system's PATH.
    cd viral-sequencUpdate the paths and filenames in the provided scripts according to your dataset and reference genomes.
    ```
 
- # Perform fastqc to determine the quality of your data (refer to fastqc in codes file)
+ ## Perform fastqc to determine the quality of your data (refer to fastqc in codes file)
  
   ```bash
 # Find 'your_file.fastq' for your sample
 fastqc "your_file.fastq"
 ```
 
-# Run the main script for read mapping:
+## Run the main script for read mapping:
 
    ```bash
 ./mapping_k181.sh
 ```
 
-# Variant call files
+## Variant call files
   ```bash
 bcftools mpileup -Ou -f k181.fasta sorted_wt.bam | bcftools call -mv > wt_variants.vcf
 ```
