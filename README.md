@@ -40,6 +40,10 @@ Make sure these tools are installed and accessible in your system's PATH.
 ./mapping_k181.sh
 ```
 
+# Variant call files
+  ```bash
+bcftools mpileup -Ou -f k181.fasta sorted_wt.bam | bcftools call -mv > wt_variants.vcf
+```
 
 The output files, including alignment files, and directories.
 
