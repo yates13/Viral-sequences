@@ -7,7 +7,6 @@ module load bwa/0.7.12
 bwa index k181.fasta
 
 # STEP 2: Mapping with BWA
-module load bwa/0.7.12
 
 # Input fastq files
 fq1="102021_178_trimmed_R1.fastq.gz"
