@@ -48,7 +48,7 @@ fastqc "your_file.fastq"
 
 3. Trimming with Trimmomatic
    
-   Change fq1 and fq2 to take in your sample in "mapping_k181.sh" in the codes folder.
+   Change fq1 and fq2 to take in your sample in "mapping_k181.sh" in the codes folder. Also change the refernce genome to the genome of yopur choosing.
    
   ```bash
 #!/bin/bash
