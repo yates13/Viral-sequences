@@ -88,6 +88,26 @@ echo "Alignment completed."
 4. Create variant files to look for mutations
 
   ```bash
+
+#!/bin/bash
+
+# STEP 4: Variant calling using samtools and bcftools
+
+# Define input files
+reference_genome="GCF_000859805.1_ViralProj15181_genomic.fna"
+mapped_reads="wt_sorted.bam"
+variants_vcf="variants.vcf"
+
+# Load samtools and bcftools modules
+module load samtools
+module load bcftools
+
+# Generate VCF file of variants
+samtools mpileup -uf $reference_genome $mapped_reads | bcftools call -mv > $variants_vcf
+
+echo "Variant calling completed."
+
+# seperate thing 
 bcftools mpileup -Ou -f k181.fasta sorted_wt.bam | bcftools call -mv > wt_variants.vcf
 ```
 
