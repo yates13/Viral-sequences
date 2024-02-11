@@ -43,12 +43,36 @@ Make sure these tools are installed and accessible in your system's PATH.
 fastqc "your_file.fastq"
 ```
 
-## Run the main script for read mapping:
+
 
 3. Trimming with Trimmomatic
    
-   Change fq1 and fq2 to take in your sample in "mapping_k181.sh" in the codes folder. Also change the refernce genome to the genome of yopur choosing.
-   
+   Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
+ ```bash
+#!/bin/bash
+
+# Directory to process
+directory="102021_178"
+
+echo "Processing directory: $directory"
+
+# Run Trimmmomatic on the files within the directory
+trimmomatic PE -threads 8 -phred33 "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R1_001.fastq.gz" "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R2_001.fastq.gz" \
+               "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1_unpaired.fastq.gz" \
+               "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2_unpaired.fastq.gz" \
+               LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:50
+
+echo "Finished processing directory: $directory"
+ ```
+
+  4.  Run fatqc on your trimmed sample
+  ```bash
+
+```
+
+## Run the main script for read mapping:
+  5. Mapping Trimmed Files
+Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
   ```bash
 #!/bin/bash
 
@@ -84,7 +108,7 @@ echo "Alignment completed."
 
 ## Variant call files
 
-4. Create variant files to look for mutations
+6. Create variant files to look for mutations
 
   ```bash
 
