@@ -1,0 +1,11 @@
+#!/bin/bash
+
+# Directory containing trimmed files
+trimmed_directory="/home/aubsdy002/trimmed/102021_178"
+
+echo "Running FastQC on trimmed samples in directory: $trimmed_directory"
+
+# Run FastQC on trimmed files
+fastqc -o "$trimmed_directory/FastQC_reports" "$trimmed_directory/"*trimmed*.fastq.gz
+
+echo "FastQC analysis complete"
