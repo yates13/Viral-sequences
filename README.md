@@ -48,62 +48,62 @@ fastqc "your_file.fastq"
 3. Trimming with Trimmomatic
    
    Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
-   ```bash
-#!/bin/bash
-
-# Directory to process
-directory="102021_178"
-
-echo "Processing directory: $directory"
-
-# Run Trimmmomatic on the files within the directory
-trimmomatic PE -threads 8 -phred33 "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R1_001.fastq.gz" "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R2_001.fastq.gz" \
-               "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1_unpaired.fastq.gz" \
-               "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2_unpaired.fastq.gz" \
-               LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:50
-
-echo "Finished processing directory: $directory"
-    ```
+  ```bash
+  #!/bin/bash
+  
+  # Directory to process
+  directory="102021_178"
+  
+  echo "Processing directory: $directory"
+  
+  # Run Trimmmomatic on the files within the directory
+  trimmomatic PE -threads 8 -phred33 "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R1_001.fastq.gz" "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R2_001.fastq.gz" \
+                 "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R1_unpaired.fastq.gz" \
+                 "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2.fastq.gz" "/home/aubsdy002/trimmed/$directory/${directory}_trimmed_R2_unpaired.fastq.gz" \
+                 LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:50
+  
+  echo "Finished processing directory: $directory"
+  ```
 
   4.  Run fatqc on your trimmed sample
-  ```bash
+```bash
 
 ```
 
 ## Run the main script for read mapping:
   5. Mapping Trimmed Files
 Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
-  ```bash
-#!/bin/bash
-
-# STEP 1: Read mapping to reference genome using BWA
-module load bwa/0.7.12
-
-# Indexing the reference genome
-bwa index k181.fasta
-
-# STEP 2: Mapping with BWA
-
-# Input fastq files
-fq1="102021_178_trimmed_R1.fastq.gz"
-fq2="102021_178_trimmed_R2.fastq.gz"
-
-echo "Working with file $fq1"
-
-# Perform read mapping using BWA and save the output to SAM file
-bwa mem k181.fasta $fq1 $fq2 > output_k181_wt.sam
-
-# Convert the SAM file to BAM format
-samtools view -bS output_k181_wt.sam > output_k181_wt.bam
-
-# Sort the BAM file and save the sorted output to a new BAM file
-samtools sort -o sorted_wt.bam -O BAM -T temp output_k181_wt.bam
-
-# Index the sorted BAM file
-samtools index sorted_wt.bam
-
-echo "Alignment completed."
-```
+      ```bash
+    #!/bin/bash
+    
+    # STEP 1: Read mapping to reference genome using BWA
+    module load bwa/0.7.12
+    
+    # Indexing the reference genome
+    bwa index k181.fasta
+    
+    # STEP 2: Mapping with BWA
+    
+    # Input fastq files
+    fq1="102021_178_trimmed_R1.fastq.gz"
+    fq2="102021_178_trimmed_R2.fastq.gz"
+    
+    echo "Working with file $fq1"
+    
+    # Perform read mapping using BWA and save the output to SAM file
+    bwa mem k181.fasta $fq1 $fq2 > output_k181_wt.sam
+    
+    # Convert the SAM file to BAM format
+    samtools view -bS output_k181_wt.sam > output_k181_wt.bam
+    
+    # Sort the BAM file and save the sorted output to a new BAM file
+    samtools sort -o sorted_wt.bam -O BAM -T temp output_k181_wt.bam
+    
+    # Index the sorted BAM file
+    samtools index sorted_wt.bam
+    
+    echo "Alignment completed."
+    ```
 
 
 ## Variant call files
