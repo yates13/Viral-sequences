@@ -81,7 +81,7 @@ echo "FastQC analysis complete"
 
 ## Run the main script for read mapping:
   5. Mapping Trimmed Files
-  Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
+Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
 ```bash
     #!/bin/bash
     
