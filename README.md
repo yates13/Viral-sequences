@@ -48,7 +48,7 @@ fastqc "your_file.fastq"
 3. Trimming with Trimmomatic
    
    Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
- ```bash
+   ```bash
 #!/bin/bash
 
 # Directory to process
@@ -63,7 +63,7 @@ trimmomatic PE -threads 8 -phred33 "/home/aubsdy002/Illumina DNA Reads/$director
                LEADING:20 TRAILING:20 SLIDINGWINDOW:4:20 MINLEN:50
 
 echo "Finished processing directory: $directory"
- ```
+    ```
 
   4.  Run fatqc on your trimmed sample
   ```bash
