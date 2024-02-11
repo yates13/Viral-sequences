@@ -73,7 +73,7 @@ fastqc "your_file.fastq"
 ## Run the main script for read mapping:
   5. Mapping Trimmed Files
 Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
-      ```bash
+```bash
     #!/bin/bash
     
     # STEP 1: Read mapping to reference genome using BWA
@@ -103,7 +103,7 @@ Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder.
     samtools index sorted_wt.bam
     
     echo "Alignment completed."
-    ```
+ ```
 
 
 ## Variant call files
