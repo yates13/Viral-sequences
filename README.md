@@ -151,8 +151,7 @@ The results of this project include:
 
 - Aligned BAM files (sorted and indexed)
 - Variant files (VCF format)
-- Consensus sequences
 - These outputs can be further analyzed and visualized using various tools such as IGV or custom scripts.
 
 ## Contributing
-Contributions to this project are welcome. If you encounter any issues, have suggestions for improvements, or want to contribute new features, please submit an issue or a pull request.es
+Contributions to this project are welcome. If you encounter any issues, have suggestions for improvements, or want to contribute new features, please submit an issue or a pull request.
