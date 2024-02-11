@@ -1,10 +1,6 @@
 ---
-title: Viral Sequences Project
+title: "Viral Sequences Project"
 ---
-
-## Introduction
-
-This project aims to analyze and study viral sequences using various bioinformatics tools and techniques.
 
 ## Table of Contents
 
@@ -14,6 +10,9 @@ This project aims to analyze and study viral sequences using various bioinformat
 - [Results](#results)
 - [Contributing](#contributing)
   
+## Introduction
+
+This project aims to analyze and study viral sequences using various bioinformatics tools and techniques.
 
 ## Installation
 
