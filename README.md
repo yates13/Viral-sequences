@@ -43,11 +43,10 @@ Make sure these tools are installed and accessible in your system's PATH.
 fastqc "your_file.fastq"
 ```
 
-
+## Trim adapters and poor sequencing
 
 3. Trimming with Trimmomatic
    
-   Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
   ```bash
   #!/bin/bash
   
@@ -67,12 +66,22 @@ fastqc "your_file.fastq"
 
   4.  Run fatqc on your trimmed sample
 ```bash
+#!/bin/bash
 
+# Directory containing trimmed files
+trimmed_directory="/home/aubsdy002/trimmed/102021_178"
+
+echo "Running FastQC on trimmed samples in directory: $trimmed_directory"
+
+# Run FastQC on trimmed files
+fastqc -o "$trimmed_directory/FastQC_reports" "$trimmed_directory/"*trimmed*.fastq.gz
+
+echo "FastQC analysis complete"
 ```
 
 ## Run the main script for read mapping:
   5. Mapping Trimmed Files
-Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
+  Change fq1 and fq2 to take in your sample "mapping_k181.sh" in the codes folder. Also, change the reference genome to the genome of your choosing.
 ```bash
     #!/bin/bash
     
