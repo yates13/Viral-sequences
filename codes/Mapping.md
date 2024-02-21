@@ -12,9 +12,9 @@ bwa index is used to create an index of the reference genome file k181.fasta.
 ## STEP 2: Mapping Reads with BWA
 
 ### Input fastq files
-fq1="102021_178_trimmed_R1.fastq.gz"
+-fq1="102021_178_trimmed_R1.fastq.gz"
 
-fq2="102021_178_trimmed_R2.fastq.gz"
+-fq2="102021_178_trimmed_R2.fastq.gz"
 
 ### Perform read mapping using BWA and save the output to a SAM file
 ```bash
