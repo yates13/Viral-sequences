@@ -8,6 +8,9 @@ title: Bash Script Execution Report
 
 This report documents the execution of the Bash script for processing Illumina DNA reads using Trimmomatic.
 
+## Trimmomatic details
+If your new to trimmomatic refer to this link  [here]([https://www.bioinformatics.babraham.ac.uk/projects/fastqc/](http://www.usadellab.org/cms/?page=trimmomatic))
+
 ## Script Description
 
 The Bash script processes the specified directory of Illumina DNA reads using Trimmomatic. It trims adapter sequences and performs quality filtering on the reads.
