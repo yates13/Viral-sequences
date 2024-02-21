@@ -64,7 +64,7 @@ fastqc "your_file.fastq"
   echo "Finished processing directory: $directory"
   ```
 
-  4.  Run fatqc on your trimmed sample
+  4.  Run fastqc on your trimmed sample
 ```bash
 #!/bin/bash
 
