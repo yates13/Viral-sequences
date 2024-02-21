@@ -13,6 +13,7 @@ bwa index is used to create an index of the reference genome file k181.fasta.
 
 ### Input fastq files
 fq1="102021_178_trimmed_R1.fastq.gz"
+
 fq2="102021_178_trimmed_R2.fastq.gz"
 
 ### Perform read mapping using BWA and save the output to a SAM file
@@ -21,7 +22,7 @@ bwa mem k181.fasta $fq1 $fq2 > output_k181_wt.sam
 ```
 fq1 and fq2 store the paths to the input FASTQ files.
 bwa mem is used to perform read mapping to the reference genome, generating a SAM file (output_k181_wt.sam).
-### Post-processing with Samtools
+## Post-processing with Samtools
 ### Convert the SAM file to BAM format
 ```bash
 samtools view -bS output_k181_wt.sam > output_k181_wt.bam
