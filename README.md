@@ -36,7 +36,7 @@ Make sure these tools are installed and accessible in your system's PATH.
 
  ## Perform fastqc to determine the quality of your data (refer to fastqc in codes file)
 
- 2. Run fatqc on your sample
+ 2. Run fastqc on your sample
     
   ```bash
 # Find 'your_file.fastq' for your sample
