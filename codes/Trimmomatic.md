@@ -24,14 +24,15 @@ echo "Processing directory: $directory"
 ## Execution
 The script executes the Trimmomatic command with the following parameters:
 
-Input files:
-1_S178_R1_001.fastq.gz
-1_S178_R2_001.fastq.gz
-Output files:
-${directory}_trimmed_R1.fastq.gz
-${directory}_trimmed_R1_unpaired.fastq.gz
-${directory}_trimmed_R2.fastq.gz
-${directory}_trimmed_R2_unpaired.fastq.gz
+# Input files:
+# - 1_S178_R1_001.fastq.gz
+# - 1_S178_R2_001.fastq.gz
+#
+# Output files:
+# - ${directory}_trimmed_R1.fastq.gz
+# - ${directory}_trimmed_R1_unpaired.fastq.gz
+# - ${directory}_trimmed_R2.fastq.gz
+# - ${directory}_trimmed_R2_unpaired.fastq.gz
 
 ```bash
 trimmomatic PE -threads 8 -phred33 "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R1_001.fastq.gz" "/home/aubsdy002/Illumina DNA Reads/$directory/1_S178_R2_001.fastq.gz" \
