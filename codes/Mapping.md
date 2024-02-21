@@ -8,7 +8,8 @@ bwa index k181.fasta
 ```
 The module load command is used to load the BWA module.
 bwa index is used to create an index of the reference genome file k181.fasta.
-  STEP 2: Mapping Reads with BWA
+
+## STEP 2: Mapping Reads with BWA
 
 # Input fastq files
 fq1="102021_178_trimmed_R1.fastq.gz"
