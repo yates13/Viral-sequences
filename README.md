@@ -1,6 +1,4 @@
----
-title: "Viral Sequences Project"
----
+# "Viral Sequences Project"
 
 ## Table of Contents
 
@@ -140,7 +138,7 @@ samtools mpileup -uf $reference_genome $mapped_reads | bcftools call -mv > $vari
 
 echo "Variant calling completed."
 
-# seperate thing 
+# Generate WT
 bcftools mpileup -Ou -f k181.fasta sorted_wt.bam | bcftools call -mv > wt_variants.vcf
 ```
 
