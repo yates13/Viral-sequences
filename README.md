@@ -1,4 +1,4 @@
-# "Viral Sequences Project"
+# Viral Sequences
 
 ## Table of Contents
 
